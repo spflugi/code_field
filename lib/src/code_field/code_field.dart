@@ -38,6 +38,9 @@ class CodeField extends StatefulWidget {
   /// {@macro flutter.widgets.textField.cursorColor}
   final Color? cursorColor;
 
+  /// {@macro flutter.widgets.textField.cursorColor}
+  final double cursorWidth;
+
   /// {@macro flutter.widgets.textField.textStyle}
   final TextStyle? textStyle;
 
@@ -87,6 +90,7 @@ class CodeField extends StatefulWidget {
     this.onTap,
     this.readOnly = false,
     this.cursorColor,
+    this.cursorWidth = 2,
     this.textSelectionTheme,
     this.lineNumberBuilder,
     this.focusNode,
@@ -332,7 +336,7 @@ class _CodeFieldState extends State<CodeField> {
         Future.delayed(const Duration(milliseconds: 300), hideAutoComplete);
       },
       cursorColor: cursorColor,
-      cursorWidth: 14,
+      cursorWidth: cursorWidth,
       autocorrect: false,
       enableSuggestions: false,
       enabled: widget.enabled,
