@@ -275,6 +275,8 @@ class _CodeFieldState extends State<CodeField> {
     final cursorColor =
         widget.cursorColor ?? styles?[rootKey]?.color ?? defaultText;
 
+    final cursorWidth = widget.cursorWidth;
+
     TextField? lineNumberCol;
     Container? numberCol;
 
