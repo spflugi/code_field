@@ -332,6 +332,7 @@ class _CodeFieldState extends State<CodeField> {
         Future.delayed(const Duration(milliseconds: 300), hideAutoComplete);
       },
       cursorColor: cursorColor,
+      cursorWidth: 14,
       autocorrect: false,
       enableSuggestions: false,
       enabled: widget.enabled,
